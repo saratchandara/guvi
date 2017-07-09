@@ -1,0 +1,238 @@
+11.to calculate the power of a number
+import java.util.Scanner;
+{
+  public static void main(String arg[])	
+  {
+    int n=5,p=3,result=1;
+ 
+    if(n>=0&&p==0)
+     {
+        result=1;
+     }
+    else if(n==0&&p>=1)
+      { 
+         result=0;
+      }
+    else
+     {
+         for(int i=1;i<=p;i++)
+	 {
+            result=result*n;
+ 	 }	    
+     }
+    System.out.println(n+"^"+p+"="+result);
+	
+  }
+}
+12.to check palindrome
+import java.util.*;
+ 
+class Palindrome
+{
+   public static void main(String args[])
+   {
+      String original, reverse = "";
+      Scanner in = new Scanner(System.in);
+ 
+      System.out.println("Enter a string to check if it is a palindrome");
+      original = in.nextLine();
+ 
+      int length = original.length();
+ 
+      for ( int i = length - 1; i >= 0; i-- )
+         reverse = reverse + original.charAt(i);
+ 
+      if (original.equals(reverse))
+         System.out.println("Entered string is a palindrome.");
+      else
+         System.out.println("Entered string is not a palindrome.");
+ 
+   }
+}	
+13.prime or not
+import java.util.Scanner;
+
+public class JavaProgram
+{
+    public static void main(String args[])
+    {
+        int num, i, count=0;
+        Scanner scan = new Scanner(System.in);
+		
+        System.out.print("Enter a Number : ");
+        num = scan.nextInt();
+		
+        for(i=2; i<num; i++)
+        {
+            if(num%i == 0)
+            {
+                count++;
+                break;
+            }
+        }
+        if(count == 0)
+        {
+            System.out.print("This is a Prime Number");
+        }
+        else
+        {
+            System.out.print("This is not a Prime Number");
+        }
+    }
+}
+14.odd numbers b/w intervals
+public class odd
+{
+public static void main(String org[])
+{
+int i,n;
+
+for(i=1;i<=n;i++){//loop for take 1 to n numbers
+if(i%2!=0)
+{
+System.out.println(i);
+}
+}
+}
+}
+15.even numbers b/w intervals
+ublic class ListEvenNumbers {
+ 
+        public static void main(String[] args) {
+               
+                //define limit
+                int limit = 50;
+               
+                System.out.println("Printing Even numbers between 1 and " + limit);
+               
+                for(int i=1; i <= limit; i++){
+                       
+                        // if the number is divisible by 2 then it is even
+                        if( i % 2 == 0){
+                                System.out.print(i + " ");
+                        }
+                }
+        }
+}
+16.prime numbers b/w intervals :
+public class Prime
+{
+    public static void main(String args[])
+    {
+         int s1, s2, s3, flag = 0, i, j;
+         Scanner s = new Scanner(System.in);
+         System.out.println ("Enter the lower limit :"); 
+         s1 = s.nextInt();
+         System.out.println ("Enter the upper limit :"); 
+         s2 = s.nextInt();
+         System.out.println ("The prime numbers in between the entered limits are :");
+         for(i = s1; i <= s2; i++)
+         {
+             for( j = 2; j < i; j++)
+             {
+                 if(i % j == 0)
+                 {
+                     flag = 0;
+                     break;
+                 }
+                 else
+                 {
+                     flag = 1;
+                 }
+             }
+             if(flag == 1)
+             {
+                 System.out.println(i);
+             }
+         }
+    }
+}
+ 17.armstrong no. :
+class ArmstrongExample{  
+  public static void main(String[] args)  {  
+    int c=0,a,temp;  
+    int n=153;//It is the number to check armstrong  
+    temp=n;  
+    while(n>0)  
+    {  
+    a=n%10;  
+    n=n/10;  
+    c=c+(a*a*a);  
+    }  
+    if(temp==c)  
+    System.out.println("armstrong number");   
+    else  
+        System.out.println("Not armstrong number");   
+   }  
+}  
+18.armstrong b/w intervals :
+import java.util.Scanner;
+
+public class JavaProgram
+{
+    public static void main(String args[])
+    {
+        int num1, num2, i, n, rem, temp, count=0;
+        Scanner scan = new Scanner(System.in);
+        
+        /* enter the interval (two number) */
+        
+        System.out.print("Enter the Interval :\n");
+		
+        System.out.print("Enter Starting Number : ");
+        num1 = scan.nextInt();
+        System.out.print("Enter Ending Number : ");
+        num2 = scan.nextInt();
+		
+        for(i=num1+1; i<num2; i++)
+        {
+            temp = i;
+            n = 0;
+            while(temp != 0)
+            {
+                rem = temp%10;
+                n = n + rem*rem*rem;
+                temp = temp/10;
+            }
+            if(i == n)
+            {
+                if(count == 0)
+                {
+                    System.out.print("Armstrong Numbers Between the Given Interval are :\n");
+                }
+                System.out.print(i + "  ");
+                count++;
+            }
+        }
+        if(count == 0)
+        {
+            System.out.print("Armstrong Number not Found between the Given Interval.");
+        }
+    }
+}
+19.factorial of a number :
+class FactorialExample{  
+ public static void main(String args[]){  
+  int i,fact=1;  
+  int number=5;//It is the number to calculate factorial    
+  for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  System.out.println("Factorial of "+number+" is: "+fact);    
+ }  
+} 
+20.multiplication table:
+import java.util.Scanner;
+public class Multiplication_Table 
+{
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+	System.out.print("Enter number:");        
+	int n=s.nextInt();
+        for(int i=1; i <= 10; i++)
+        {
+            System.out.println(n+" * "+i+" = "+n*i);
+        }
+    }
+}
